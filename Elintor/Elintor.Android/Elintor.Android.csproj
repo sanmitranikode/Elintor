@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="RendererDroid\CustomEntryRendere.cs" />
+    <Compile Include="RendererDroid\GradientColorStackRenderer.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -86,7 +87,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icons8people100.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Elintor\Elintor.csproj">
       <Project>{EF244686-3CD5-4B17-A72E-91CF6A2A1DD9}</Project>

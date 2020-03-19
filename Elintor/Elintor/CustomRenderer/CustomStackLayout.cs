@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace Elintor.CustomRenderer
 {
-    public class CustomEntry:Entry
+  public  class CustomStackLayout:StackLayout
     {
         public Color StartColor
         {

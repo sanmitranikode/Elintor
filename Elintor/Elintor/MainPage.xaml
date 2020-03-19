@@ -4,97 +4,125 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:controls="clr-namespace:Elintor.CustomRenderer"
+             NavigationPage.HasNavigationBar="False"
              mc:Ignorable="d"
-             x:Class="Elintor.MainPage" BackgroundColor="#111111">
+             x:Class="Elintor.MainPage" >
+    <controls:CustomStackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" StartColor="#f7ebd3" EndColor="#bbd3eb">
+        <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <StackLayout  Grid.Row="1">
+                <Image Source="icons8people100.png" HorizontalOptions="CenterAndExpand" HeightRequest="200" WidthRequest="200" VerticalOptions="FillAndExpand">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="0.8*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="1*"/>
-        </Grid.RowDefinitions>
-        <StackLayout  Grid.Row="1">
-            <Image>
-                
-            </Image>
-            
-        </StackLayout>
-        <StackLayout Grid.Row="2" Spacing="10">
-            <Frame HorizontalOptions="FillAndExpand" CornerRadius="15" HeightRequest="50" Padding="2" BackgroundColor="White" Margin="30,0,30,0">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.3*"/>
-                        <ColumnDefinition Width="0.1*"/>
-                        <ColumnDefinition Width="1.8*"/>
-                    </Grid.ColumnDefinitions>
-                    <StackLayout  Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center">
-                        <Image Source="user_24" VerticalOptions="Center" HorizontalOptions="Center">
+                </Image>
 
-                        </Image>
-                       
+            </StackLayout>
+            <StackLayout Grid.Row="2" Spacing="10">
+                <Frame HorizontalOptions="FillAndExpand" CornerRadius="25" HeightRequest="50" Padding="2" BackgroundColor="White" Margin="30,0,30,0">
+                    <Grid RowSpacing="0" ColumnSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.5*"/>
+                            <ColumnDefinition Width="0.1*"/>
+                            <ColumnDefinition Width="2.8*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout  Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" >
+                            <Image Source="user_24" VerticalOptions="Center" HorizontalOptions="Center">
+
+                            </Image>
+
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" VerticalOptions="Center" Margin="0,0,0,0">
+                            <BoxView WidthRequest="2" HeightRequest="30"  VerticalOptions="Center" HorizontalOptions="Start"   CornerRadius="10" BackgroundColor="#888888"/>
+
+                        </StackLayout>
+
+                        <controls:CustomEntry Grid.Column="2" Placeholder="UserName" VerticalOptions="Center" PlaceholderColor="#888888" Margin="0,0,8,0"></controls:CustomEntry>
+
+                    </Grid>
+
+
+
+                </Frame>
+                <Frame HorizontalOptions="FillAndExpand" CornerRadius="25" HeightRequest="50" Padding="2" BackgroundColor="White" Margin="30,0,30,0">
+                    <Grid RowSpacing="0" ColumnSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.5*"/>
+                            <ColumnDefinition Width="0.1*"/>
+                            <ColumnDefinition Width="2.8*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout  Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" >
+                            <Image Source="lock_24" VerticalOptions="Center" HorizontalOptions="Center">
+
+                            </Image>
+
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" VerticalOptions="Center" Margin="0,0,0,0">
+                            <BoxView WidthRequest="2" HeightRequest="30"  VerticalOptions="Center" HorizontalOptions="Start"   CornerRadius="10" BackgroundColor="#888888"/>
+
+                        </StackLayout>
+
+                        <controls:CustomEntry Grid.Column="2" Placeholder="Password" IsPassword="True" VerticalOptions="Center" PlaceholderColor="#888888" Margin="0,0,8,0"></controls:CustomEntry>
+
+                    </Grid>
+
+
+
+                </Frame>
+                <!--<Frame HorizontalOptions="FillAndExpand" CornerRadius="20" HeightRequest="50" Padding="2" BackgroundColor="White" Margin="30,0,30,0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.5*"/>
+                            <ColumnDefinition Width="0.1*"/>
+                            <ColumnDefinition Width="2.8*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout  Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center">
+                            <Image Source="lock_24" VerticalOptions="Center" HorizontalOptions="Center">
+
+                            </Image>
+
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" VerticalOptions="Center">
+                            <BoxView  WidthRequest="2" HeightRequest="30"  VerticalOptions="Center" HorizontalOptions="Start"  CornerRadius="5" BackgroundColor="#888888"/>
+
+                        </StackLayout>
+
+                        <controls:CustomEntry Grid.Column="2" Placeholder="Password" VerticalOptions="Center"  PlaceholderColor="#888888" Margin="0,0,6,0"></controls:CustomEntry>
+
+                    </Grid>
+
+
+
+                </Frame>-->
+
+
+
+                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal" >
+                    <StackLayout Orientation="Horizontal" Margin="50,0,0,0">
+                        <CheckBox Color="#005dbd"></CheckBox>
+                        <Label Text="Remeber me" VerticalOptions="Center" FontSize="Micro" TextColor="#005dbd"></Label>
                     </StackLayout>
-                    <StackLayout Grid.Column="1" VerticalOptions="Center">
-                        <BoxView   VerticalOptions="Center" HorizontalOptions="Start" Margin="6,5,6,5" CornerRadius="5" BackgroundColor="#888888"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,0,50,0" >
 
-                    </StackLayout>
-                    
-                    <controls:CustomEntry Grid.Column="2" Placeholder="UserName" PlaceholderColor="#888888" Margin="0,0,6,0"></controls:CustomEntry>
-
-                </Grid>
-               
-                   
-             
-            </Frame>
-            <Frame HorizontalOptions="FillAndExpand" CornerRadius="15" HeightRequest="50" Padding="2" BackgroundColor="White" Margin="30,0,30,0">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.3*"/>
-                        <ColumnDefinition Width="0.1*"/>
-                        <ColumnDefinition Width="1.8*"/>
-                    </Grid.ColumnDefinitions>
-                    <StackLayout  Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center">
-                        <Image Source="lock_24" VerticalOptions="Center" HorizontalOptions="Center">
-
-                        </Image>
-
-                    </StackLayout>
-                    <StackLayout Grid.Column="1" VerticalOptions="Center">
-                        <BoxView   VerticalOptions="Center" HorizontalOptions="Start" Margin="6,5,6,5" CornerRadius="5" BackgroundColor="#888888"/>
-
+                        <Label Text="Forgot Password" VerticalOptions="Center" FontSize="Micro" TextColor="#005dbd"></Label>
                     </StackLayout>
 
-                    <controls:CustomEntry Grid.Column="2" Placeholder="Password" PlaceholderColor="#888888" Margin="0,0,6,0"></controls:CustomEntry>
-
-                </Grid>
 
 
-
-            </Frame>
-           
-           
-          
-            <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal" >
-                <StackLayout Orientation="Horizontal" Margin="50,0,0,0">
-                    <CheckBox Color="#005dbd"></CheckBox>
-                    <Label Text="Remeber me" VerticalOptions="Center" FontSize="Micro" TextColor="#005dbd"></Label>
                 </StackLayout>
-                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,0,50,0" >
-                  
-                    <Label Text="Forgot Password" VerticalOptions="Center" FontSize="Micro" TextColor="#005dbd"></Label>
-                </StackLayout>
+                <StackLayout HorizontalOptions="CenterAndExpand" >
+                    <Button CornerRadius="25" Text="LOGIN"  TextColor="White" WidthRequest="150" Clicked="Button_Clicked" BackgroundColor="#1d99df">
 
+                    </Button>
+                </StackLayout>
 
 
             </StackLayout>
-            <StackLayout HorizontalOptions="CenterAndExpand" >
-                <Button CornerRadius="20" Text="LOGIN"  TextColor="White" BackgroundColor="#1d99df">
-
-                </Button>
-            </StackLayout>
-            
-            
-        </StackLayout>
-    </Grid>
+        </Grid>
+    </controls:CustomStackLayout>
+ 
 
 </ContentPage>
